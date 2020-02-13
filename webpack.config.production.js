@@ -3,13 +3,15 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const path = require('path');
 
 module.exports = {
+    mode: "production",
     entry: './src/index.tsx',
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.min.js'
+        filename: 'bundle.min.js',
+        publicPath: "/eth2-widgets/"
     },
     module: {
         rules: [

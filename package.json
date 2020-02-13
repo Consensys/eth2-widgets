@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "start:prod": "webpack-dev-server --config webpack.config.production.js",
     "test": "jest --watch",
     "test:ci": "jest --coverage",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
