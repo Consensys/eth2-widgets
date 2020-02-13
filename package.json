@@ -10,7 +10,10 @@
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "tslint:fix": "tslint --fix -c tslint.json -p tsconfig.json",
     "prettier": "prettier --write 'src/**/*.{ts,js,json}'",
-    "check-formatting": "prettier --list-different 'src/**/*.{ts,ts,js,json}'"
+    "check-formatting": "prettier --list-different 'src/**/*.{ts,ts,js,json}'",
+    "bundle": "webpack --config webpack.config.production.js",
+    "predeploy": "npm run bundle",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +40,7 @@
     "base64-loader": "^1.0.0",
     "coveralls": "^3.0.9",
     "css-loader": "^3.4.2",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.1",
     "jest": "^25.1.0",
