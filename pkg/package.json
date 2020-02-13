@@ -1,0 +1,15 @@
+{
+  "name": "eth2-simulator",
+  "collaborators": [
+    "Edson Alcala <edson_alcala@msn.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "eth2-simulator_bg.wasm",
+    "eth2-simulator.js",
+    "eth2-simulator.d.ts"
+  ],
+  "module": "eth2-simulator.js",
+  "types": "eth2-simulator.d.ts",
+  "sideEffects": "false"
+}
