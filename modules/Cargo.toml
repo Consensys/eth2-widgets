@@ -1,5 +1,5 @@
 [package]
-name = "eth2-calculator"
+name = "eth2-simulator"
 version = "0.1.0"
 authors = ["Edson Alcala <edson_alcala@msn.com>"]
 edition = "2018"

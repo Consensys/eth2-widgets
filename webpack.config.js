@@ -41,8 +41,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({ template: './public/index.html' }),
         new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, "./eth2-calculator"),
-            outName: 'eth2-calculator',
+            crateDirectory: path.resolve(__dirname, "./modules"),
+            outName: 'eth2-simulator',
             outDir: '../pkg'
         })
     ]

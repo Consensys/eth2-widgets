@@ -31,7 +31,7 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
     const [validatorAnnualInterest, setValidatorAnnualInterest] = useState(0)
     useEffect(() => {
         const loadClient = async () => {
-            import("eth2-calculator")
+            import("eth2-simulator")
                 .then(module => {
                     console.log("MODULE", module.get_validator_reward)
                     setWasmClient(module)
