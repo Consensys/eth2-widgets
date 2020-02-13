@@ -1,0 +1,40 @@
+{
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "rules": {
+        "no-unused-variable": false,
+        "no-shadowed-variable": false,
+        "interface-name": false,
+        "member-access": false,
+        "cyclomatic-complexity": [
+            true,
+            10
+        ],
+        "object-literal-sort-keys": [
+            false
+        ],
+        "no-console": [
+            false
+        ],
+        "ordered-imports": [
+            false,
+            {
+                "grouped-imports": true,
+                "named-imports-order": "any"
+            }
+        ],
+        "jsx-no-lambda": false
+    },
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**/*.ts",
+            "coverage/**/*.js",
+            "src/**/*.json",
+            "src/__mocks__/**",
+            "pkg/**/*"
+        ]
+    }
+}

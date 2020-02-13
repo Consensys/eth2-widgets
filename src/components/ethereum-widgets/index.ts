@@ -1,0 +1,1 @@
+export { EthereumWidget } from './EthereumWidget'

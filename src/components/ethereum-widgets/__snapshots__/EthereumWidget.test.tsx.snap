@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ethereum Widget Component that the ethereum widget snapshot is correct 1`] = `
+<div>
+  <div
+    class="sc-AykKC hvNouc"
+  >
+    <h2
+      data-testid="widget-title"
+    >
+      Network Simulation
+    </h2>
+  </div>
+</div>
+`;
