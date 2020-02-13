@@ -13,7 +13,7 @@
     "check-formatting": "prettier --list-different 'src/**/*.{ts,ts,js,json}'",
     "bundle": "webpack --config webpack.config.production.js",
     "predeploy": "npm run bundle",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
