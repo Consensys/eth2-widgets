@@ -2,8 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const path = require('path');
 
-const wasmExtensionRegExp = /\.wasm$/;
-
 module.exports = {
     entry: './src/index.tsx',
     devtool: "source-map",

@@ -5,10 +5,10 @@ import { EthereumWidget } from './components/ethereum-widgets';
 
 export const MainRoutes = () => (
     <Switch>
-        <Route exact path="/network-simulation">
+        <Route exact={true} path="/network-simulation">
             <EthereumWidget type="network-simulation" />
         </Route>
-        <Route path="/validator-simulation">
+        <Route exact={true} path="/validator-simulation">
             <EthereumWidget type="validator-simulation" />
         </Route>
     </Switch>

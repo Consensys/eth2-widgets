@@ -3,7 +3,7 @@
 exports[`Ethereum Widget Component that the ethereum widget snapshot is correct 1`] = `
 <div>
   <div
-    class="sc-AykKC hvNouc"
+    class="widget-container"
   >
     <h2
       data-testid="widget-title"

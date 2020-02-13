@@ -1,7 +1,8 @@
 module.exports = {
   preset: 'ts-jest',
   moduleNameMapper: {
-    "\\eth2-simulator": "<rootDir>/src/__mocks__/Eth2CalculatorMock.ts"
+    "\\eth2-simulator": "<rootDir>/src/__mocks__/Eth2SimulatorMock.ts",
+    "\\.(css|less)$": "<rootDir>/src/__mocks__/styleMock.ts"
   },
   coverageThreshold: {
     "global": {
