@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import { Collapse, Icon } from 'antd';
 
-import { EthStakedSlider, AverageValidatorsOnline } from '../Sliders'
+import { EthStakedSlider, OnlineProbabilitySlider, HonestProbabilitySlider } from './Sliders'
 
-import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE } from './constants'
+import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE, BIGGEST_PROBABILITY } from './constants'
 
 import "./styles.css"
+import { Button } from 'antd'
+
+const { Panel } = Collapse;
 
 export type WidgetType = 'network-simulation' | 'validator-simulation'
 
@@ -27,8 +30,12 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
     const [isReady, setIsReady] = useState(false)
     const [wasmClient, setWasmClient] = useState(undefined)
     const [ethStaked, setEthStaked] = useState(MINIMAL_ETH_STAKED)
+    const [onlineProbability, setOnlineProbability] = useState(BIGGEST_PROBABILITY)
+    const [honestProbability, setHonestProbability] = useState(BIGGEST_PROBABILITY)
     const [averagePercentageOfValidatorOnline, setAveragePercentageOfValidatorOnline] = useState(MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE)
     const [validatorAnnualInterest, setValidatorAnnualInterest] = useState(0)
+    const [showAdvanceOptions, setShowAdvanceOptions] = useState(false)
+
     useEffect(() => {
         const loadClient = async () => {
             import("eth2-simulator")
@@ -58,7 +65,44 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
 
     return (
         <div className="widget-container">
-            <h2 data-testid="widget-title">{getTitle(type, title)}</h2>
+            <div className="controls-container">
+                <h3 data-testid="widget-title">{getTitle(type, title)}</h3>
+                <EthStakedSlider
+                    onChange={(e) => {
+                        console.log("New Eth Staked Value", e)
+                        // call rust module
+                        setEthStaked(e)
+                    }}
+                    initialValue={MINIMAL_ETH_STAKED}
+                />
+                <Collapse
+                    accordion={true}
+                    expandIcon={() => <Icon type="setting" />}
+                    onChange={() => setShowAdvanceOptions(!showAdvanceOptions)}>
+                    <Panel header="Advance options" key="advanced">
+                        <OnlineProbabilitySlider
+                            initialValue={BIGGEST_PROBABILITY}
+                            onChange={(e) => {
+                                console.log("New online probability value", e)
+                                // call rust module
+                                setOnlineProbability(e)
+                            }}
+                        />
+                        <HonestProbabilitySlider
+                            initialValue={BIGGEST_PROBABILITY}
+                            onChange={(e) => {
+                                console.log("New honest probability value", e)
+                                // call rust module
+                                setHonestProbability(e)
+                            }}
+                        />
+                    </Panel>
+                </Collapse>
+                <Button type="primary" block={true}>Run</Button>
+            </div>
+            <div className="chart-container">
+
+            </div>
         </div>
     )
 }
@@ -72,14 +116,7 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
 // add sections for controls and for chart
 // install styled components
 // <div>
-// <EthStakedSlider
-//     onChange={(e) => {
-//         console.log("New Eth Staked Value", e)
-//         // call rust module
-//         setEthStaked(e)
-//     }}
-//     initialValue={MINIMAL_ETH_STAKED}
-// />
+
 // <AverageValidatorsOnline
 //     onChange={(e) => {
 //         console.log("New Eth Staked Value", e)

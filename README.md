@@ -11,3 +11,9 @@ This project is a proof of concept to understand the integration of a React base
     npm start
 ```
 
+## Commands
+
+```
+npm run deploy
+
+```
