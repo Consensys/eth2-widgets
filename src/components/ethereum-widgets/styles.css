@@ -28,7 +28,7 @@
 
 .chart-container {
     grid-area: "chart";
-    background-color: yellow;
+    background-color: white;
 }
 
 /* ant overrides */
@@ -48,27 +48,3 @@
 .controls-container .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
     left: 0;
 }
-
-/* slider */
-/* .controls-container .ant-slider-track,
-.controls-container .ant-slider:hover,
-.controls-container .ant-slider-handle, */
-/* .controls-container .ant-slider-handle.ant-tooltip-open, */
-/* .ant-slider:hover, .ant-slider-handle:not(.ant-tooltip-open), */
-/* .controls-container .ant-slider-handle:focus {
-    background-color: #3C65FF; 
-    border: #3C65FF
-}
-.controls-container .ant-btn-primary {
-    background-color:#3C65FF;
-    border-color:#3C65FF;
-}
-
-.controls-container .ant-btn-primary:active, 
-.controls-container .ant-btn-primary.active, 
-.controls-container .ant-btn-primary:focus, 
-.controls-container .ant-btn-primary:hover {
-    color: #fff;
-    background-color: #3C65FF;
-    border-color: #3C65FF;
-} */

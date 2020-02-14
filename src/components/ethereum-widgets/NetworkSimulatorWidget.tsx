@@ -1,38 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { Collapse, Icon, Spin } from 'antd';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Label, AreaChart, Area, Legend, Tooltip } from 'recharts';
+import { Collapse, Icon, Button } from 'antd';
+import { CartesianGrid, XAxis, YAxis, Label, AreaChart, Area, Legend, Tooltip } from 'recharts';
 
+import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE, BIGGEST_PROBABILITY, NET_REWARDS_COLOUR, REWARDS_COLOUR, PENALTIES_COLOUR } from './constants'
 import { EthStakedSlider, OnlineProbabilitySlider, HonestProbabilitySlider } from './Sliders'
-
-import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE, BIGGEST_PROBABILITY } from './constants'
+import { buildFakeSimulationData } from './faker';
+import { ControlsContainer, ChartContainer } from './Containers';
 
 import "./styles.css"
-import { Button } from 'antd'
-import { buildFakeSimulationData } from './faker';
 
 const { Panel } = Collapse;
 
-export type WidgetType = 'network-simulation' | 'validator-simulation'
-
-interface Props {
-    title?: string
-    type: WidgetType
-}
-
-const titlesPerWidget = {
-    'network-simulation': "Network Simulation",
-    'validator-simulation': "Validator Simulation"
-}
-
-const NET_REWARDS_COLOUR = "#3794FC"
-const PENALTIES_COLOUR = "#FF0000"
-const REWARDS_COLOUR = "#9D60FB"
-
-const getTitle = (type: WidgetType, title?: string) => {
-    return title ? title : titlesPerWidget[type]
-}
-
-export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
+export const NetworkSimulatorWidget: React.FC = () => {
     const [isReady, setIsReady] = useState(false)
     const [wasmClient, setWasmClient] = useState(undefined)
     const [ethStaked, setEthStaked] = useState(MINIMAL_ETH_STAKED)
@@ -91,8 +70,7 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
 
     return (
         <div className="widget-container">
-            <div className="controls-container">
-                <h3 data-testid="widget-title">{getTitle(type, title)}</h3>
+            <ControlsContainer title="Network Simulation">
                 <EthStakedSlider
                     onChange={(e) => {
                         console.log("New Eth Staked Value", e)
@@ -125,42 +103,41 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
                     </Panel>
                 </Collapse>
                 <Button onClick={runSimulation} type="primary" block={true} loading={isRunning}>{isRunning ? "" : "Run"}</Button>
-            </div>
-            <div className="chart-container">
-                {isRunning ? <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #FAFAFC" }}><Spin tip="Running simulation..." /></div>
-                    :
-                    <AreaChart width={800} height={400} data={buildFakeSimulationData()}>
-                        <Legend onClick={handleLegendClick} verticalAlign="top" align="right" height={36} />
-                        <Tooltip formatter={(value, name, props) => (`${value}%`)} />
-                        <defs>
-                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor={NET_REWARDS_COLOUR} stopOpacity={0.8} />
-                                <stop offset="95%" stopColor={NET_REWARDS_COLOUR} stopOpacity={0} />
-                            </linearGradient>
-                            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor={REWARDS_COLOUR} stopOpacity={0.8} />
-                                <stop offset="95%" stopColor={REWARDS_COLOUR} stopOpacity={0} />
-                            </linearGradient>
-                            <linearGradient id="colorQv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor={PENALTIES_COLOUR} stopOpacity={0.8} />
-                                <stop offset="95%" stopColor={PENALTIES_COLOUR} stopOpacity={0} />
-                            </linearGradient>
-                        </defs>
+            </ControlsContainer>
 
-                        <Area type="monotone" dataKey={rewardsActive ? "rewards" : ""} stroke={REWARDS_COLOUR} fillOpacity={1} fill="url(#colorPv)" name="Rewards" />
-                        <Area type="monotone" dataKey={netRewardsActive ? "net_rewards" : ""} stroke={NET_REWARDS_COLOUR} fillOpacity={1} fill="url(#colorUv)" name="Net rewards" />
-                        <Area type="monotone" dataKey={penaltiesActive ? "penalties" : ""} stroke={PENALTIES_COLOUR} fillOpacity={1} fill="url(#colorQv)" name="Penalties" />
+            <ChartContainer isLoading={isRunning}>
+                <AreaChart width={800} height={400} data={buildFakeSimulationData()}>
+                    <Legend onClick={handleLegendClick} verticalAlign="top" align="right" height={36} />
+                    <Tooltip formatter={(value, name, props) => (`${value}%`)} />
+                    <defs>
+                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor={NET_REWARDS_COLOUR} stopOpacity={0.8} />
+                            <stop offset="95%" stopColor={NET_REWARDS_COLOUR} stopOpacity={0} />
+                        </linearGradient>
+                        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor={REWARDS_COLOUR} stopOpacity={0.8} />
+                            <stop offset="95%" stopColor={REWARDS_COLOUR} stopOpacity={0} />
+                        </linearGradient>
+                        <linearGradient id="colorQv" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor={PENALTIES_COLOUR} stopOpacity={0.8} />
+                            <stop offset="95%" stopColor={PENALTIES_COLOUR} stopOpacity={0} />
+                        </linearGradient>
+                    </defs>
 
-                        <CartesianGrid stroke="#D5DCE4" strokeDasharray="5 5" />
+                    <Area type="monotone" dataKey={rewardsActive ? "rewards" : ""} stroke={REWARDS_COLOUR} fillOpacity={1} fill="url(#colorPv)" name="Rewards" />
+                    <Area type="monotone" dataKey={netRewardsActive ? "net_rewards" : ""} stroke={NET_REWARDS_COLOUR} fillOpacity={1} fill="url(#colorUv)" name="Net rewards" />
+                    <Area type="monotone" dataKey={penaltiesActive ? "penalties" : ""} stroke={PENALTIES_COLOUR} fillOpacity={1} fill="url(#colorQv)" name="Penalties" />
 
-                        <XAxis stroke="#97A4BA" dataKey="time">
-                            <Label style={{ textAnchor: 'middle', fontSize: '80%' }} value="Months" offset={0} fill="#97A4BA" position="insideBottom" />
-                        </XAxis>
+                    <CartesianGrid stroke="#D5DCE4" strokeDasharray="5 5" />
 
-                        <YAxis stroke="#97A4BA" datakey="net_rewards" unit="%" name="net_rewards" viewBox={200} />
+                    <XAxis stroke="#97A4BA" dataKey="time">
+                        <Label style={{ textAnchor: 'middle', fontSize: '80%' }} value="Months" offset={0} fill="#97A4BA" position="insideBottom" />
+                    </XAxis>
 
-                    </AreaChart>}
-            </div>
+                    <YAxis stroke="#97A4BA" datakey="net_rewards" unit="%" name="net_rewards" viewBox={200} />
+
+                </AreaChart>
+            </ChartContainer>
             {/* <div className="chart-container">
                 {isRunning ? <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #FAFAFC" }}><Spin tip="Running simulation..." /></div>
                     :
@@ -181,11 +158,3 @@ export const EthereumWidget: React.FC<Props> = ({ title, type }: Props) => {
         </div>
     )
 }
-// <AverageValidatorsOnline
-//     onChange={(e) => {
-//         console.log("New Eth Staked Value", e)
-//         // call rust module
-//         setAveragePercentageOfValidatorOnline(e)
-//     }}
-//     initialValue={MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE}
-// />
