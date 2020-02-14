@@ -24,7 +24,8 @@
     "eth2-simulator": "file:pkg",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "recharts": "^2.0.0-beta.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",

@@ -1,1 +1,2 @@
-export { EthereumWidget } from './EthereumWidget'
+export { ValidatorSimulatorWidget } from './ValidatorSimulatorWidget'
+export { NetworkSimulatorWidget } from './NetworkSimulatorWidget'
