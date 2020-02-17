@@ -18,7 +18,7 @@ This project contains a set of widgets to understand the economics of Ethereum 2
 
 ## Fully embeddable
 
-<iframe width="500" height="400" src="https://consensys.github.io/eth2-widgets/#/validator-simulation" frameborder="0" allowfullscreen="true"></iframe>
+<iframe src="https://www.w3schools.com"></iframe>
 
 ## Install
 
