@@ -22,7 +22,7 @@ export const ValidatorSimulatorWidget: React.FC = () => {
         const loadClient = async () => {
             import("eth2-simulator")
                 .then(module => {
-                    console.log("MODULE", module.get_validator_reward)
+                    console.log("MODULE", module.get_validator_rewards)
                     setWasmClient(module)
                     setIsReady(true)
                     console.log("WASM MODULE LOADED")
@@ -40,7 +40,7 @@ export const ValidatorSimulatorWidget: React.FC = () => {
         if (isReady) {
             console.log("WASM CLIENT", wasmClient)
             console.log("USE EFFECT RUNNING", ethStaked, averagePercentageOfValidatorOnline)
-            const result = wasmClient.get_validator_reward(ethStaked, averagePercentageOfValidatorOnline);
+            const result = wasmClient.get_validator_rewards(ethStaked, averagePercentageOfValidatorOnline);
             setValidatorAnnualInterest(result)
         }
     });

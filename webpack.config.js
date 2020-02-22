@@ -58,7 +58,8 @@ module.exports = {
         new WasmPackPlugin({
             crateDirectory: path.resolve(__dirname, "./modules"),
             outName: 'eth2-simulator',
-            outDir: '../pkg'
+            outDir: '../pkg',
+            forceMode: "production"
         })
     ]
 }

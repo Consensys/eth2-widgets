@@ -28,6 +28,23 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: 'style-loader', // creates style nodes from JS strings
+                    },
+                    {
+                        loader: 'css-loader', // translates CSS into CommonJS
+                    },
+                    {
+                        loader: 'less-loader', // compiles Less to CSS
+                        options: {
+                            javascriptEnabled: true,
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -36,7 +53,8 @@ module.exports = {
         new WasmPackPlugin({
             crateDirectory: path.resolve(__dirname, "./modules"),
             outName: 'eth2-simulator',
-            outDir: '../pkg'
+            outDir: '../pkg',
+            forceMode: "production"
         })
     ]
 }

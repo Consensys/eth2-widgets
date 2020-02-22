@@ -17,8 +17,7 @@ export const NetworkSimulatorWidget: React.FC = () => {
     const [ethStaked, setEthStaked] = useState(MINIMAL_ETH_STAKED)
     const [onlineProbability, setOnlineProbability] = useState(BIGGEST_PROBABILITY)
     const [honestProbability, setHonestProbability] = useState(BIGGEST_PROBABILITY)
-    const [averagePercentageOfValidatorOnline, setAveragePercentageOfValidatorOnline] = useState(MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE)
-    const [validatorAnnualInterest, setValidatorAnnualInterest] = useState(0)
+    const [networkSimulationData, setNetworkSimulationData] = useState([])
     const [showAdvanceOptions, setShowAdvanceOptions] = useState(false)
     const [netRewardsActive, setNetRewardsActive] = useState(true)
     const [rewardsActive, setRewardsActive] = useState(true)
@@ -29,7 +28,7 @@ export const NetworkSimulatorWidget: React.FC = () => {
         const loadClient = async () => {
             import("eth2-simulator")
                 .then(module => {
-                    console.log("MODULE", module.get_validator_reward)
+                    console.log("MODULE", module.get_network_rewards)
                     setWasmClient(module)
                     setIsReady(true)
                     console.log("WASM MODULE LOADED")
@@ -42,15 +41,6 @@ export const NetworkSimulatorWidget: React.FC = () => {
                 console.log("ERROR")
             })
     }, [])
-
-    useEffect(() => {
-        if (isReady) {
-            console.log("WASM CLIENT", wasmClient)
-            console.log("USE EFFECT RUNNING", ethStaked, averagePercentageOfValidatorOnline)
-            const result = wasmClient.get_validator_reward(ethStaked, averagePercentageOfValidatorOnline);
-            setValidatorAnnualInterest(result)
-        }
-    });
 
     const handleLegendClick = ({ value }) => {
         if (value === "Rewards") {
@@ -66,6 +56,10 @@ export const NetworkSimulatorWidget: React.FC = () => {
 
     const runSimulation = () => {
         setIsRunning(true)
+        const result = wasmClient.get_network_rewards(ethStaked, onlineProbability, honestProbability);
+        console.log("Result", result)
+        setNetworkSimulationData(result)
+        setIsRunning(false)
     }
 
     return (
@@ -106,7 +100,7 @@ export const NetworkSimulatorWidget: React.FC = () => {
             </ControlsContainer>
 
             <ChartContainer isLoading={isRunning}>
-                <AreaChart width={800} height={400} data={buildFakeSimulationData()}>
+                <AreaChart width={800} height={400} data={networkSimulationData}>
                     <Legend onClick={handleLegendClick} verticalAlign="top" align="right" height={36} />
                     <Tooltip formatter={(value, name, props) => (`${value}%`)} />
                     <defs>
@@ -124,17 +118,17 @@ export const NetworkSimulatorWidget: React.FC = () => {
                         </linearGradient>
                     </defs>
 
-                    <Area type="monotone" dataKey={rewardsActive ? "rewards" : ""} stroke={REWARDS_COLOUR} fillOpacity={1} fill="url(#colorPv)" name="Rewards" />
+                    <Area type="monotone" dataKey={rewardsActive ? "deltas_head_ffg_rewards" : ""} stroke={REWARDS_COLOUR} fillOpacity={1} fill="url(#colorPv)" name="Rewards" />
                     <Area type="monotone" dataKey={netRewardsActive ? "net_rewards" : ""} stroke={NET_REWARDS_COLOUR} fillOpacity={1} fill="url(#colorUv)" name="Net rewards" />
-                    <Area type="monotone" dataKey={penaltiesActive ? "penalties" : ""} stroke={PENALTIES_COLOUR} fillOpacity={1} fill="url(#colorQv)" name="Penalties" />
+                    <Area type="monotone" dataKey={penaltiesActive ? "deltas_head_ffg_penalties" : ""} stroke={PENALTIES_COLOUR} fillOpacity={1} fill="url(#colorQv)" name="Penalties" />
 
                     <CartesianGrid stroke="#D5DCE4" strokeDasharray="5 5" />
 
-                    <XAxis stroke="#97A4BA" dataKey="time">
+                    <XAxis stroke="#97A4BA" dataKey="epoch_number">
                         <Label style={{ textAnchor: 'middle', fontSize: '80%' }} value="Months" offset={0} fill="#97A4BA" position="insideBottom" />
                     </XAxis>
 
-                    <YAxis stroke="#97A4BA" datakey="net_rewards" unit="%" name="net_rewards" viewBox={200} />
+                    <YAxis stroke="#97A4BA" datakey="deltas_head_ffg_rewards" unit="%" name="net_rewards" viewBox={200} />
 
                 </AreaChart>
             </ChartContainer>
