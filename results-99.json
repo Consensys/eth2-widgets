@@ -1,0 +1,962 @@
+[
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 1,
+        "network_percentage_rewards": 1.3421520184282,
+        "network_percentage_penalties": 1.4857584e-6,
+        "network_percentage_net_rewards": 1.3421505326698,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 2,
+        "network_percentage_rewards": 2.6842763965367,
+        "network_percentage_penalties": 1.432815e-6,
+        "network_percentage_net_rewards": 2.6842749637217,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 3,
+        "network_percentage_rewards": 4.0264337089481,
+        "network_percentage_penalties": 1.544526e-6,
+        "network_percentage_net_rewards": 4.0264321644221,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 4,
+        "network_percentage_rewards": 5.3685785472085,
+        "network_percentage_penalties": 1.646523e-6,
+        "network_percentage_net_rewards": 5.3685769006855,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 5,
+        "network_percentage_rewards": 6.7107330768922,
+        "network_percentage_penalties": 1.403673e-6,
+        "network_percentage_net_rewards": 6.7107316732192,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 6,
+        "network_percentage_rewards": 8.052850580200301,
+        "network_percentage_penalties": 1.631952e-6,
+        "network_percentage_net_rewards": 8.052848948248302,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 7,
+        "network_percentage_rewards": 9.3950106396404,
+        "network_percentage_penalties": 1.529955e-6,
+        "network_percentage_net_rewards": 9.3950091096854,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 8,
+        "network_percentage_rewards": 10.7371276737646,
+        "network_percentage_penalties": 1.481385e-6,
+        "network_percentage_net_rewards": 10.7371261923796,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 9,
+        "network_percentage_rewards": 12.0792570367206,
+        "network_percentage_penalties": 1.5882390000000001e-6,
+        "network_percentage_net_rewards": 12.0792554484816,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 10,
+        "network_percentage_rewards": 13.421332840882,
+        "network_percentage_penalties": 1.50567e-6,
+        "network_percentage_net_rewards": 13.421331335212,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 11,
+        "network_percentage_rewards": 14.763522331675698,
+        "network_percentage_penalties": 1.583382e-6,
+        "network_percentage_net_rewards": 14.763520748293699,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 1000000,
+        "month_number": 12,
+        "network_percentage_rewards": 16.1056662613776,
+        "network_percentage_penalties": 1.491099e-6,
+        "network_percentage_net_rewards": 16.1056647702786,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.94908323578085,
+        "network_percentage_penalties": 1.0576040999999999e-6,
+        "network_percentage_net_rewards": 0.94908217817675,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 2,
+        "network_percentage_rewards": 1.8980515389845,
+        "network_percentage_penalties": 1.0938564e-6,
+        "network_percentage_net_rewards": 1.8980504451281002,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 3,
+        "network_percentage_rewards": 2.8470949640092997,
+        "network_percentage_penalties": 1.0955735999999999e-6,
+        "network_percentage_net_rewards": 2.8470938684357,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 4,
+        "network_percentage_rewards": 3.7961658177804503,
+        "network_percentage_penalties": 1.1385036000000001e-6,
+        "network_percentage_net_rewards": 3.7961646792768504,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 5,
+        "network_percentage_rewards": 4.7452187773946,
+        "network_percentage_penalties": 1.0938564e-6,
+        "network_percentage_net_rewards": 4.7452176835382,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 6,
+        "network_percentage_rewards": 5.69427803083805,
+        "network_percentage_penalties": 1.1196144e-6,
+        "network_percentage_net_rewards": 5.69427691122365,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 7,
+        "network_percentage_rewards": 6.6433319164064,
+        "network_percentage_penalties": 1.0715328e-6,
+        "network_percentage_net_rewards": 6.6433308448736,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 8,
+        "network_percentage_rewards": 7.59238666981535,
+        "network_percentage_penalties": 1.0526435999999999e-6,
+        "network_percentage_net_rewards": 7.59238561717175,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 9,
+        "network_percentage_rewards": 8.5414600053062,
+        "network_percentage_penalties": 1.0440576e-6,
+        "network_percentage_net_rewards": 8.541458961248601,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 10,
+        "network_percentage_rewards": 9.49050657439445,
+        "network_percentage_penalties": 1.0835532e-6,
+        "network_percentage_net_rewards": 9.490505490841251,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 11,
+        "network_percentage_rewards": 10.43954431894235,
+        "network_percentage_penalties": 1.0852704e-6,
+        "network_percentage_net_rewards": 10.43954323367195,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 2000000,
+        "month_number": 12,
+        "network_percentage_rewards": 11.388593434993249,
+        "network_percentage_penalties": 1.1058768e-6,
+        "network_percentage_net_rewards": 11.388592329116449,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.774886611606,
+        "network_percentage_penalties": 8.720573e-7,
+        "network_percentage_net_rewards": 0.7748857395487,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 2,
+        "network_percentage_rewards": 1.5496601923908333,
+        "network_percentage_penalties": 8.786308000000001e-7,
+        "network_percentage_net_rewards": 1.5496593137600334,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 3,
+        "network_percentage_rewards": 2.3245232721271,
+        "network_percentage_penalties": 9.16006e-7,
+        "network_percentage_net_rewards": 2.3245223561211,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 4,
+        "network_percentage_rewards": 3.0993921122570334,
+        "network_percentage_penalties": 8.440340999999999e-7,
+        "network_percentage_net_rewards": 3.0993912682229334,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 5,
+        "network_percentage_rewards": 3.874249624313533,
+        "network_percentage_penalties": 8.945079e-7,
+        "network_percentage_net_rewards": 3.874248729805633,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 6,
+        "network_percentage_rewards": 4.649104189664633,
+        "network_percentage_penalties": 9.188101e-7,
+        "network_percentage_net_rewards": 4.649103270854533,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 7,
+        "network_percentage_rewards": 5.423964636529433,
+        "network_percentage_penalties": 8.552505e-7,
+        "network_percentage_net_rewards": 5.423963781278934,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 8,
+        "network_percentage_rewards": 6.198830146330667,
+        "network_percentage_penalties": 8.374912000000001e-7,
+        "network_percentage_net_rewards": 6.198829308839467,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 9,
+        "network_percentage_rewards": 6.973681696923734,
+        "network_percentage_penalties": 8.515117e-7,
+        "network_percentage_net_rewards": 6.973680845412034,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 10,
+        "network_percentage_rewards": 7.748535040106801,
+        "network_percentage_penalties": 8.561852e-7,
+        "network_percentage_net_rewards": 7.748534183921601,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 11,
+        "network_percentage_rewards": 8.523406352240567,
+        "network_percentage_penalties": 9.047896e-7,
+        "network_percentage_net_rewards": 8.523405447450967,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 3000000,
+        "month_number": 12,
+        "network_percentage_rewards": 9.298257347148867,
+        "network_percentage_penalties": 8.655322e-7,
+        "network_percentage_net_rewards": 9.298256481616667,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.671059851152,
+        "network_percentage_penalties": 7.6435095e-7,
+        "network_percentage_net_rewards": 0.67105908680105,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 2,
+        "network_percentage_rewards": 1.34200958505435,
+        "network_percentage_penalties": 7.7937915e-7,
+        "network_percentage_net_rewards": 1.3420088056752,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 3,
+        "network_percentage_rewards": 2.0130440008717496,
+        "network_percentage_penalties": 8.00797875e-7,
+        "network_percentage_net_rewards": 2.0130432000738745,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 4,
+        "network_percentage_rewards": 2.6841328429975,
+        "network_percentage_penalties": 7.31585625e-7,
+        "network_percentage_net_rewards": 2.6841321114118752,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 5,
+        "network_percentage_rewards": 3.3552123478988,
+        "network_percentage_penalties": 7.850126250000001e-7,
+        "network_percentage_net_rewards": 3.3552115628861747,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 6,
+        "network_percentage_rewards": 4.02630711563145,
+        "network_percentage_penalties": 7.552634999999999e-7,
+        "network_percentage_net_rewards": 4.0263063603679505,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 7,
+        "network_percentage_rewards": 4.69738573751875,
+        "network_percentage_penalties": 7.59513375e-7,
+        "network_percentage_net_rewards": 4.697384978005375,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 8,
+        "network_percentage_rewards": 5.36847383291925,
+        "network_percentage_penalties": 7.91691e-7,
+        "network_percentage_net_rewards": 5.36847304122825,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 9,
+        "network_percentage_rewards": 6.03955500308865,
+        "network_percentage_penalties": 7.43121e-7,
+        "network_percentage_net_rewards": 6.03955425996765,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 10,
+        "network_percentage_rewards": 6.7106408229475,
+        "network_percentage_penalties": 7.9047675e-7,
+        "network_percentage_net_rewards": 6.71064003247075,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 11,
+        "network_percentage_rewards": 7.381731824087249,
+        "network_percentage_penalties": 7.370497499999999e-7,
+        "network_percentage_net_rewards": 7.381731087037499,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 4000000,
+        "month_number": 12,
+        "network_percentage_rewards": 8.05281653783295,
+        "network_percentage_penalties": 7.5404925e-7,
+        "network_percentage_net_rewards": 8.0528157837837,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.60019292140932,
+        "network_percentage_penalties": 6.9747156e-7,
+        "network_percentage_net_rewards": 0.6001922239377601,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 2,
+        "network_percentage_rewards": 1.200292554071,
+        "network_percentage_penalties": 6.8352816e-7,
+        "network_percentage_net_rewards": 1.20029187054284,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 3,
+        "network_percentage_rewards": 1.8004248113870198,
+        "network_percentage_penalties": 6.833112e-7,
+        "network_percentage_net_rewards": 1.8004241280758198,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 4,
+        "network_percentage_rewards": 2.40062976250594,
+        "network_percentage_penalties": 6.53772e-7,
+        "network_percentage_net_rewards": 2.40062910873394,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 5,
+        "network_percentage_rewards": 3.00083837641786,
+        "network_percentage_penalties": 6.8418e-7,
+        "network_percentage_net_rewards": 3.0008376922378597,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 6,
+        "network_percentage_rewards": 3.6010549967197,
+        "network_percentage_penalties": 6.954744e-7,
+        "network_percentage_net_rewards": 3.6010543012453002,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 7,
+        "network_percentage_rewards": 4.2012672764569,
+        "network_percentage_penalties": 6.863520000000001e-7,
+        "network_percentage_net_rewards": 4.2012665901049,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 8,
+        "network_percentage_rewards": 4.80147837902542,
+        "network_percentage_penalties": 7.137191999999999e-7,
+        "network_percentage_net_rewards": 4.80147766530622,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 9,
+        "network_percentage_rewards": 5.4016942595546205,
+        "network_percentage_penalties": 6.576816e-7,
+        "network_percentage_net_rewards": 5.401693601873021,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 10,
+        "network_percentage_rewards": 6.00190726205284,
+        "network_percentage_penalties": 6.572472e-7,
+        "network_percentage_net_rewards": 6.00190660480564,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 11,
+        "network_percentage_rewards": 6.60211232751982,
+        "network_percentage_penalties": 7.024248e-7,
+        "network_percentage_net_rewards": 6.60211162509502,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 5000000,
+        "month_number": 12,
+        "network_percentage_rewards": 7.20232068056728,
+        "network_percentage_penalties": 7.119816e-7,
+        "network_percentage_net_rewards": 7.20231996858568,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.5478867222968167,
+        "network_percentage_penalties": 6.03008e-7,
+        "network_percentage_net_rewards": 0.5478861192888167,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 2,
+        "network_percentage_rewards": 1.0956842200552832,
+        "network_percentage_penalties": 6.426474e-7,
+        "network_percentage_net_rewards": 1.0956835774078832,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 3,
+        "network_percentage_rewards": 1.6435023194125666,
+        "network_percentage_penalties": 5.9951665e-7,
+        "network_percentage_net_rewards": 1.6435017198959165,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 4,
+        "network_percentage_rewards": 2.1913900981339167,
+        "network_percentage_penalties": 6.311594999999999e-7,
+        "network_percentage_net_rewards": 2.1913894669744165,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 5,
+        "network_percentage_rewards": 2.7392777651408333,
+        "network_percentage_penalties": 6.093498000000001e-7,
+        "network_percentage_net_rewards": 2.7392771557910334,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 6,
+        "network_percentage_rewards": 3.2871637626837167,
+        "network_percentage_penalties": 6.123238500000001e-7,
+        "network_percentage_net_rewards": 3.287163150359867,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 7,
+        "network_percentage_rewards": 3.8350451780951333,
+        "network_percentage_penalties": 6.5065605e-7,
+        "network_percentage_net_rewards": 3.8350445274390834,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 8,
+        "network_percentage_rewards": 4.38292424555495,
+        "network_percentage_penalties": 6.21246e-7,
+        "network_percentage_net_rewards": 4.382923624308949,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 9,
+        "network_percentage_rewards": 4.9308083952125,
+        "network_percentage_penalties": 6.1959375e-7,
+        "network_percentage_net_rewards": 4.93080777561875,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 10,
+        "network_percentage_rewards": 5.478697926452733,
+        "network_percentage_penalties": 6.2091555e-7,
+        "network_percentage_net_rewards": 5.478697305537183,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 11,
+        "network_percentage_rewards": 6.026584874924,
+        "network_percentage_penalties": 6.21246e-7,
+        "network_percentage_net_rewards": 6.026584253677999,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 6000000,
+        "month_number": 12,
+        "network_percentage_rewards": 6.574470016064117,
+        "network_percentage_penalties": 6.2223735e-7,
+        "network_percentage_net_rewards": 6.574469393826767,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.5072843031020857,
+        "network_percentage_penalties": 5.650128857142858e-7,
+        "network_percentage_net_rewards": 0.5072837380892,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 2,
+        "network_percentage_rewards": 1.0144835761810858,
+        "network_percentage_penalties": 5.702913428571428e-7,
+        "network_percentage_net_rewards": 1.014483005889743,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 3,
+        "network_percentage_rewards": 1.5216876740907144,
+        "network_percentage_penalties": 5.783485285714286e-7,
+        "network_percentage_net_rewards": 1.5216870957421857,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 4,
+        "network_percentage_rewards": 2.0289498330195572,
+        "network_percentage_penalties": 5.551681285714285e-7,
+        "network_percentage_net_rewards": 2.028949277851429,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 5,
+        "network_percentage_rewards": 2.536226630578814,
+        "network_percentage_penalties": 5.622486857142857e-7,
+        "network_percentage_net_rewards": 2.5362260683301283,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 6,
+        "network_percentage_rewards": 3.0435059200357286,
+        "network_percentage_penalties": 5.782455e-7,
+        "network_percentage_net_rewards": 3.0435053417902287,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 7,
+        "network_percentage_rewards": 3.5507804795749283,
+        "network_percentage_penalties": 5.795567142857143e-7,
+        "network_percentage_net_rewards": 3.550779900018214,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 8,
+        "network_percentage_rewards": 4.058060679051814,
+        "network_percentage_penalties": 5.730006428571428e-7,
+        "network_percentage_net_rewards": 4.058060106051172,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 9,
+        "network_percentage_rewards": 4.565339631774585,
+        "network_percentage_penalties": 5.69067e-7,
+        "network_percentage_net_rewards": 4.565339062707586,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 10,
+        "network_percentage_rewards": 5.072615601806786,
+        "network_percentage_penalties": 5.688047571428571e-7,
+        "network_percentage_net_rewards": 5.0726150330020285,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 11,
+        "network_percentage_rewards": 5.5799014636835,
+        "network_percentage_penalties": 5.680180285714285e-7,
+        "network_percentage_net_rewards": 5.579900895665472,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 7000000,
+        "month_number": 12,
+        "network_percentage_rewards": 6.087187601586528,
+        "network_percentage_penalties": 5.947668e-7,
+        "network_percentage_net_rewards": 6.087187006819728,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.47451417838466253,
+        "network_percentage_penalties": 5.513643750000001e-7,
+        "network_percentage_net_rewards": 0.47451362702028754,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 2,
+        "network_percentage_rewards": 0.94896619296605,
+        "network_percentage_penalties": 5.4087825e-7,
+        "network_percentage_net_rewards": 0.9489656520878,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 3,
+        "network_percentage_rewards": 1.423424804527475,
+        "network_percentage_penalties": 5.42776875e-7,
+        "network_percentage_net_rewards": 1.4234242617506,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 4,
+        "network_percentage_rewards": 1.8979078422909,
+        "network_percentage_penalties": 5.443524e-7,
+        "network_percentage_net_rewards": 1.8979072979384999,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 5,
+        "network_percentage_rewards": 2.3724247257547,
+        "network_percentage_penalties": 5.482161e-7,
+        "network_percentage_net_rewards": 2.3724241775386,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 6,
+        "network_percentage_rewards": 2.8469394194842126,
+        "network_percentage_penalties": 5.503626e-7,
+        "network_percentage_net_rewards": 2.8469388691216126,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 7,
+        "network_percentage_rewards": 3.3214574025379626,
+        "network_percentage_penalties": 5.383422e-7,
+        "network_percentage_net_rewards": 3.3214568641957625,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 8,
+        "network_percentage_rewards": 3.79597756949725,
+        "network_percentage_penalties": 5.2224345e-7,
+        "network_percentage_net_rewards": 3.7959770472538,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 9,
+        "network_percentage_rewards": 4.270495053772263,
+        "network_percentage_penalties": 5.5014795e-7,
+        "network_percentage_net_rewards": 4.270494503624312,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 10,
+        "network_percentage_rewards": 4.745013322673651,
+        "network_percentage_penalties": 5.5014795e-7,
+        "network_percentage_net_rewards": 4.7450127725257,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 11,
+        "network_percentage_rewards": 5.219532924195038,
+        "network_percentage_penalties": 5.3855685e-7,
+        "network_percentage_net_rewards": 5.219532385638188,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 8000000,
+        "month_number": 12,
+        "network_percentage_rewards": 5.694050415787725,
+        "network_percentage_penalties": 5.4843075e-7,
+        "network_percentage_net_rewards": 5.694049867356975,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.44735271475980004,
+        "network_percentage_penalties": 5.079032e-7,
+        "network_percentage_net_rewards": 0.44735220685660004,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 2,
+        "network_percentage_rewards": 0.8946345264955111,
+        "network_percentage_penalties": 5.188883e-7,
+        "network_percentage_net_rewards": 0.8946340076072111,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 3,
+        "network_percentage_rewards": 1.3419208501829556,
+        "network_percentage_penalties": 5.044907e-7,
+        "network_percentage_net_rewards": 1.3419203456922555,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 4,
+        "network_percentage_rewards": 1.7892357760488,
+        "network_percentage_penalties": 5.090226666666667e-7,
+        "network_percentage_net_rewards": 1.7892352670261333,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 5,
+        "network_percentage_rewards": 2.2365778524159334,
+        "network_percentage_penalties": 5.083032e-7,
+        "network_percentage_net_rewards": 2.2365773441127335,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 6,
+        "network_percentage_rewards": 2.6839094805208226,
+        "network_percentage_penalties": 5.095622666666667e-7,
+        "network_percentage_net_rewards": 2.683908970958556,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 7,
+        "network_percentage_rewards": 3.1312500512312664,
+        "network_percentage_penalties": 4.922950666666666e-7,
+        "network_percentage_net_rewards": 3.1312495589362,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 8,
+        "network_percentage_rewards": 3.578580975306933,
+        "network_percentage_penalties": 5.102817333333333e-7,
+        "network_percentage_net_rewards": 3.5785804650251998,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 9,
+        "network_percentage_rewards": 4.025920358705067,
+        "network_percentage_penalties": 5.225126666666667e-7,
+        "network_percentage_net_rewards": 4.0259198361924,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 10,
+        "network_percentage_rewards": 4.4732587872668,
+        "network_percentage_penalties": 5.009286666666667e-7,
+        "network_percentage_net_rewards": 4.473258286338133,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 11,
+        "network_percentage_rewards": 4.9205960808316,
+        "network_percentage_penalties": 5.210737333333333e-7,
+        "network_percentage_net_rewards": 4.920595559757866,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 9000000,
+        "month_number": 12,
+        "network_percentage_rewards": 5.367931338375622,
+        "network_percentage_penalties": 4.949930666666667e-7,
+        "network_percentage_net_rewards": 5.367930843382555,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 1,
+        "network_percentage_rewards": 0.42437813185068,
+        "network_percentage_penalties": 4.76616e-7,
+        "network_percentage_net_rewards": 0.42437765523468,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 2,
+        "network_percentage_rewards": 0.8486947737539999,
+        "network_percentage_penalties": 4.835616000000001e-7,
+        "network_percentage_net_rewards": 0.8486942901924,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 3,
+        "network_percentage_rewards": 1.27301749220508,
+        "network_percentage_penalties": 4.81992e-7,
+        "network_percentage_net_rewards": 1.27301701021308,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 4,
+        "network_percentage_rewards": 1.6973604164292202,
+        "network_percentage_penalties": 4.82304e-7,
+        "network_percentage_net_rewards": 1.6973599341252201,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 5,
+        "network_percentage_rewards": 2.1218069507079598,
+        "network_percentage_penalties": 4.85376e-7,
+        "network_percentage_net_rewards": 2.12180646533196,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 6,
+        "network_percentage_rewards": 2.54625909575554,
+        "network_percentage_penalties": 4.86144e-7,
+        "network_percentage_net_rewards": 2.54625860961154,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 7,
+        "network_percentage_rewards": 2.9707148441560802,
+        "network_percentage_penalties": 4.916735999999999e-7,
+        "network_percentage_net_rewards": 2.97071435248248,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 8,
+        "network_percentage_rewards": 3.3951694566466197,
+        "network_percentage_penalties": 4.833792e-7,
+        "network_percentage_net_rewards": 3.39516897326742,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 9,
+        "network_percentage_rewards": 3.8196242029152,
+        "network_percentage_penalties": 4.972032e-7,
+        "network_percentage_net_rewards": 3.819623705712,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 10,
+        "network_percentage_rewards": 4.244083693435,
+        "network_percentage_penalties": 4.90752e-7,
+        "network_percentage_net_rewards": 4.244083202683,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 11,
+        "network_percentage_rewards": 4.6685405606404,
+        "network_percentage_penalties": 4.898304e-7,
+        "network_percentage_net_rewards": 4.66854007081,
+        "probability_online": 0.99
+    },
+    {
+        "initial_staked_balance": 10000000,
+        "month_number": 12,
+        "network_percentage_rewards": 5.09298924526644,
+        "network_percentage_penalties": 4.795392e-7,
+        "network_percentage_net_rewards": 5.09298876572724,
+        "probability_online": 0.99
+    }
+]
