@@ -51,11 +51,11 @@ export const EthStakedSlider: React.FC<SliderProps> = (props: SliderProps) => {
 };
 
 const onlineProbabilityMarks = {
-    80: {
+    70: {
         style: {
             color: '#67758D',
         },
-        label: <p className="legend-slider">80%</p>
+        label: <p className="legend-slider">70%</p>
     },
     100: {
         style: {
@@ -91,7 +91,7 @@ export const OnlineProbabilitySlider: React.FC<SliderProps> = (props: SliderProp
             marks={onlineProbabilityMarks}
             disabled={disabled}
             max={100}
-            min={80} />
+            min={70} />
     </SliderWrapper>
 }
 

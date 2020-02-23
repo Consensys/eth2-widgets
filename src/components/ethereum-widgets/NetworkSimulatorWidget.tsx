@@ -12,6 +12,9 @@ import "./styles.css"
 
 const { Panel } = Collapse;
 
+const percentages = [{
+
+}]
 export const getDataItems = (totalEthStaked: number, onlineProbability: number, honestProbability: number) => { // honestProbability is ignored
     console.log("totalEthStaked", totalEthStaked)
     console.log("onlineProbability", onlineProbability)
@@ -123,7 +126,7 @@ export const NetworkSimulatorWidget: React.FC = () => {
                         <Label style={{ textAnchor: 'middle', fontSize: '80%' }} value="Months" offset={0} fill="#97A4BA" position="insideBottom" />
                     </XAxis>
 
-                    <YAxis stroke="#97A4BA" datakey="network_percentage_net_rewards" unit="%" name="net_rewards" viewBox={200} />
+                    <YAxis stroke="#97A4BA" datakey="network_percentage_net_rewards" unit="%" name="net_rewards" viewBox={200} type="number" domain={[0, 20]} />
 
                 </AreaChart>
             </ChartContainer>
