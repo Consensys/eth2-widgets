@@ -4,16 +4,28 @@ import { CartesianGrid, XAxis, YAxis, Label, AreaChart, Area, Legend, Tooltip } 
 
 import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE, BIGGEST_PROBABILITY, NET_REWARDS_COLOUR, REWARDS_COLOUR, PENALTIES_COLOUR } from './constants'
 import { EthStakedSlider, OnlineProbabilitySlider, HonestProbabilitySlider } from './Sliders'
-import { buildFakeSimulationData } from './faker';
+// import { buildFakeSimulationData } from './faker';
 import { ControlsContainer, ChartContainer } from './Containers';
+import { data } from '../../data'
 
 import "./styles.css"
 
 const { Panel } = Collapse;
 
+export const getDataItems = (totalEthStaked: number, onlineProbability: number, honestProbability: number) => { // honestProbability is ignored
+    console.log("totalEthStaked", totalEthStaked)
+    console.log("onlineProbability", onlineProbability)
+    const items = data.filter((item) => {
+        // console.log("ITEM", item)
+        return item.initial_staked_balance === (totalEthStaked * 1000000) && item.probability_online == (onlineProbability / 100)
+    })
+
+    return items
+}
+
 export const NetworkSimulatorWidget: React.FC = () => {
     const [isReady, setIsReady] = useState(false)
-    const [wasmClient, setWasmClient] = useState(undefined)
+    // const [wasmClient, setWasmClient] = useState(undefined)
     const [ethStaked, setEthStaked] = useState(MINIMAL_ETH_STAKED)
     const [onlineProbability, setOnlineProbability] = useState(BIGGEST_PROBABILITY)
     const [honestProbability, setHonestProbability] = useState(BIGGEST_PROBABILITY)
@@ -23,24 +35,6 @@ export const NetworkSimulatorWidget: React.FC = () => {
     const [rewardsActive, setRewardsActive] = useState(true)
     const [penaltiesActive, setPenaltiesActive] = useState(true)
     const [isRunning, setIsRunning] = useState(false)
-
-    useEffect(() => {
-        const loadClient = async () => {
-            import("eth2-simulator")
-                .then(module => {
-                    console.log("MODULE", module.get_network_rewards)
-                    setWasmClient(module)
-                    setIsReady(true)
-                    console.log("WASM MODULE LOADED")
-                }).catch((error) => {
-                    console.log("Error loading the module")
-                });
-        }
-        loadClient()
-            .catch(e => {
-                console.log("ERROR")
-            })
-    }, [])
 
     const handleLegendClick = ({ value }) => {
         if (value === "Rewards") {
@@ -56,7 +50,7 @@ export const NetworkSimulatorWidget: React.FC = () => {
 
     const runSimulation = () => {
         setIsRunning(true)
-        const result = wasmClient.get_network_rewards(ethStaked, onlineProbability, honestProbability);
+        const result = getDataItems(ethStaked, onlineProbability, honestProbability);
         console.log("Result", result)
         setNetworkSimulationData(result)
         setIsRunning(false)
@@ -66,6 +60,7 @@ export const NetworkSimulatorWidget: React.FC = () => {
         <div className="widget-container">
             <ControlsContainer title="Network Simulation">
                 <EthStakedSlider
+                    disabled={false}
                     onChange={(e) => {
                         console.log("New Eth Staked Value", e)
                         // call rust module
@@ -79,18 +74,18 @@ export const NetworkSimulatorWidget: React.FC = () => {
                     onChange={() => setShowAdvanceOptions(!showAdvanceOptions)}>
                     <Panel header="Advance options" key="advanced">
                         <OnlineProbabilitySlider
+                            disabled={false}
                             initialValue={BIGGEST_PROBABILITY}
                             onChange={(e) => {
                                 console.log("New online probability value", e)
-                                // call rust module
                                 setOnlineProbability(e)
                             }}
                         />
                         <HonestProbabilitySlider
+                            disabled={true}
                             initialValue={BIGGEST_PROBABILITY}
                             onChange={(e) => {
                                 console.log("New honest probability value", e)
-                                // call rust module
                                 setHonestProbability(e)
                             }}
                         />
@@ -118,17 +113,17 @@ export const NetworkSimulatorWidget: React.FC = () => {
                         </linearGradient>
                     </defs>
 
-                    <Area type="monotone" dataKey={rewardsActive ? "deltas_head_ffg_rewards" : ""} stroke={REWARDS_COLOUR} fillOpacity={1} fill="url(#colorPv)" name="Rewards" />
-                    <Area type="monotone" dataKey={netRewardsActive ? "net_rewards" : ""} stroke={NET_REWARDS_COLOUR} fillOpacity={1} fill="url(#colorUv)" name="Net rewards" />
-                    <Area type="monotone" dataKey={penaltiesActive ? "deltas_head_ffg_penalties" : ""} stroke={PENALTIES_COLOUR} fillOpacity={1} fill="url(#colorQv)" name="Penalties" />
+                    <Area type="monotone" dataKey={rewardsActive ? "network_percentage_rewards" : ""} stroke={REWARDS_COLOUR} fillOpacity={1} fill="url(#colorPv)" name="Rewards" />
+                    <Area type="monotone" dataKey={netRewardsActive ? "network_percentage_net_rewards" : ""} stroke={NET_REWARDS_COLOUR} fillOpacity={1} fill="url(#colorUv)" name="Net rewards" />
+                    <Area type="monotone" dataKey={penaltiesActive ? "network_percentage_penalties" : ""} stroke={PENALTIES_COLOUR} fillOpacity={1} fill="url(#colorQv)" name="Penalties" />
 
                     <CartesianGrid stroke="#D5DCE4" strokeDasharray="5 5" />
 
-                    <XAxis stroke="#97A4BA" dataKey="epoch_number">
+                    <XAxis stroke="#97A4BA" dataKey="month_number">
                         <Label style={{ textAnchor: 'middle', fontSize: '80%' }} value="Months" offset={0} fill="#97A4BA" position="insideBottom" />
                     </XAxis>
 
-                    <YAxis stroke="#97A4BA" datakey="deltas_head_ffg_rewards" unit="%" name="net_rewards" viewBox={200} />
+                    <YAxis stroke="#97A4BA" datakey="network_percentage_net_rewards" unit="%" name="net_rewards" viewBox={200} />
 
                 </AreaChart>
             </ChartContainer>

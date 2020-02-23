@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -54,12 +53,6 @@ module.exports = {
         hot: true
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './public/index.html' }),
-        new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, "./modules"),
-            outName: 'eth2-simulator',
-            outDir: '../pkg',
-            forceMode: "production"
-        })
+        new HtmlWebpackPlugin({ template: './public/index.html' })
     ]
 }

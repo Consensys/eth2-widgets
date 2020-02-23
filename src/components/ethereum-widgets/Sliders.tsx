@@ -4,6 +4,7 @@ import { Slider } from 'antd'
 interface SliderProps {
     onChange: (value: number) => void
     initialValue: number
+    disabled: boolean
 }
 
 const SliderWrapper: React.FC = (props: PropsWithChildren<any>) => {
@@ -49,6 +50,21 @@ export const EthStakedSlider: React.FC<SliderProps> = (props: SliderProps) => {
 
 };
 
+const onlineProbabilityMarks = {
+    80: {
+        style: {
+            color: '#67758D',
+        },
+        label: <p className="legend-slider">80%</p>
+    },
+    100: {
+        style: {
+            color: '#67758D',
+        },
+        label: <p className="legend-slider">100%</p>
+    }
+};
+
 const probabilityMarks = {
     0: {
         style: {
@@ -65,15 +81,17 @@ const probabilityMarks = {
 };
 
 export const OnlineProbabilitySlider: React.FC<SliderProps> = (props: SliderProps) => {
-    const { initialValue, onChange } = props
+    const { initialValue, onChange, disabled } = props
     return <SliderWrapper>
         <h4>Online Probability</h4>
         <Slider tipFormatter={percentageFormatter}
             defaultValue={initialValue}
             onChange={onChange}
-            marks={probabilityMarks}
+            step={5}
+            marks={onlineProbabilityMarks}
+            disabled={disabled}
             max={100}
-            min={0} />
+            min={80} />
     </SliderWrapper>
 }
 
@@ -86,6 +104,7 @@ export const HonestProbabilitySlider: React.FC<SliderProps> = (props: SliderProp
             onChange={onChange}
             marks={probabilityMarks}
             max={100}
+            disabled={true}
             min={0} />
     </SliderWrapper>
 }

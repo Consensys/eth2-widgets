@@ -19,29 +19,13 @@ export const ValidatorSimulatorWidget: React.FC = () => {
     const [isRunning, setIsRunning] = useState(false)
 
     useEffect(() => {
-        const loadClient = async () => {
-            import("eth2-simulator")
-                .then(module => {
-                    console.log("MODULE", module.get_validator_rewards)
-                    setWasmClient(module)
-                    setIsReady(true)
-                    console.log("WASM MODULE LOADED")
-                }).catch((error) => {
-                    console.log("Error loading the module")
-                });
-        }
-        loadClient()
-            .catch(e => {
-                console.log("ERROR")
-            })
-    }, [])
-
-    useEffect(() => {
         if (isReady) {
             console.log("WASM CLIENT", wasmClient)
-            console.log("USE EFFECT RUNNING", ethStaked, averagePercentageOfValidatorOnline)
-            const result = wasmClient.get_validator_rewards(ethStaked, averagePercentageOfValidatorOnline);
-            setValidatorAnnualInterest(result)
+            // console.log("USE EFFECT RUNNING", ethStaked, averagePercentageOfValidatorOnline)
+            // const result = wasmClient.get_validator_rewards(ethStaked, averagePercentageOfValidatorOnline);
+            // TODO
+            // const result = [];
+            // setValidatorAnnualInterest(result)
         }
     });
 
@@ -59,6 +43,7 @@ export const ValidatorSimulatorWidget: React.FC = () => {
         <div className="widget-container">
             <ControlsContainer title="Network Simulation">
                 <EthStakedSlider
+                    disabled={false}
                     onChange={(e) => {
                         console.log("New Eth Staked Value", e)
                         // call rust module
@@ -67,6 +52,7 @@ export const ValidatorSimulatorWidget: React.FC = () => {
                     initialValue={MINIMAL_ETH_STAKED}
                 />
                 <AverageValidatorsOnline
+                    disabled={false}
                     onChange={(e) => {
                         console.log("New Eth Staked Value", e)
                         // call rust module
