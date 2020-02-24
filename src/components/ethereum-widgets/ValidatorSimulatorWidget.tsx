@@ -12,7 +12,7 @@ import "./styles.css"
 export const getDefaultDataToComputeMyRewards = (totalEthStaked: number) => {
     const onlineProbability = 1;
     const defaultDataToComputeMyRewards = data.filter((item) => {
-        return item.initial_staked_balance === totalEthStaked && item.probability_online === onlineProbability
+        return item.initial_staked_balance === (totalEthStaked * 1000000) && item.probability_online === onlineProbability
     })
     return defaultDataToComputeMyRewards
 }
@@ -73,7 +73,7 @@ export const ValidatorSimulatorWidget: React.FC = () => {
             <ControlsContainer title="Validator Simulation">
                 <div style={{ width: "100%" }}>
                     <h4>My Eth to stake</h4>
-                    <Input onChange={(e) => {
+                    <Input type="number" min={32} onChange={(e) => {
                         // TODO VALIDATE That only numbers are valid
                         console.log("New My Eth Staked value", e.target.value);
                         setMyEthStaked(Number(e.target.value));
