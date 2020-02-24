@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Collapse, Icon, Button } from 'antd';
 import { CartesianGrid, XAxis, YAxis, Label, AreaChart, Area, Legend, Tooltip } from 'recharts';
 
-import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE, BIGGEST_PROBABILITY, NET_REWARDS_COLOUR, REWARDS_COLOUR, PENALTIES_COLOUR } from './constants'
+import { MINIMAL_ETH_STAKED, BIGGEST_PROBABILITY, NET_REWARDS_COLOUR, REWARDS_COLOUR, PENALTIES_COLOUR } from './constants'
 import { EthStakedSlider, OnlineProbabilitySlider, HonestProbabilitySlider } from './Sliders'
 import { ControlsContainer, ChartContainer } from './Containers';
 import { data } from '../../data'
@@ -122,23 +122,6 @@ export const NetworkSimulatorWidget: React.FC = () => {
 
                 </AreaChart>
             </ChartContainer>
-            {/* <div className="chart-container">
-                {isRunning ? <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #FAFAFC" }}><Spin tip="Running simulation..." /></div>
-                    :
-                    <LineChart width={800} height={400} data={buildFakeSimulationData()}>
-                        <Legend onClick={handleLegendClick} verticalAlign="top" align="right" height={36} />
-                        <Line type="monotone" strokeWidth={rewardsActive ? 1 : 0} dataKey="rewards" stroke={REWARDS_COLOUR} name="Rewards" />
-
-                        <Line type="monotone" strokeWidth={netRewardsActive ? 1 : 0} dataKey="net_rewards" stroke={NET_REWARDS_COLOUR} name="Net rewards" />
-
-                        <Line type="monotone" strokeWidth={penaltiesActive ? 1 : 0} dataKey="penalties" stroke={PENALTIES_COLOUR} name="Penalties" />
-                        <CartesianGrid stroke="#D5DCE4" strokeDasharray="5 5" />
-                        <XAxis stroke="#97A4BA" dataKey="time">
-                            <Label style={{ textAnchor: 'middle', fontSize: '80%' }} value="Months" offset={0} fill="#97A4BA" position="insideBottom" />
-                        </XAxis>
-                        <YAxis stroke="#97A4BA" datakey="net_rewards" unit="%" name="net_rewards" viewBox={200} />
-                    </LineChart>}
-            </div> */}
         </div>
     )
 }
