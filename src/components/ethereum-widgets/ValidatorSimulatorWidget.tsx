@@ -12,7 +12,7 @@ import "./styles.css"
 export const getDefaultDataToComputeMyRewards = (totalEthStaked: number) => {
     const onlineProbability = 1;
     const defaultDataToComputeMyRewards = data.filter((item) => {
-        return item.initial_staked_balance === totalEthStaked && item.probability_online == onlineProbability
+        return item.initial_staked_balance === totalEthStaked && item.probability_online === onlineProbability
     })
     return defaultDataToComputeMyRewards
 }

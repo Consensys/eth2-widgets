@@ -15,7 +15,7 @@ export const getDataItems = (totalEthStaked: number, onlineProbability: number, 
     console.log("totalEthStaked", totalEthStaked)
     console.log("onlineProbability", onlineProbability)
     const items = data.filter((item) => {
-        return item.initial_staked_balance === (totalEthStaked * 1000000) && item.probability_online == (onlineProbability / 100)
+        return item.initial_staked_balance === (totalEthStaked * 1000000) && item.probability_online === (onlineProbability / 100)
     })
 
     return items
