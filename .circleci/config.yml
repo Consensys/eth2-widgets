@@ -73,14 +73,14 @@ jobs:
           name: Bundle
           command: npm run bundle
 
-  publish: 
+  deploy: 
     docker: *nodejs-docker-image
     steps:
       - checkout
       - *restore_cache
       - run:
           name: Publish
-          command: npm run publish
+          command: npm run deploy
 
 workflows:
   version: 2
@@ -101,6 +101,6 @@ workflows:
             - tslint-and-format
             - unit-tests
             - npm-audit
-      - publish:
+      - deploy:
           requires:
             - bundle
