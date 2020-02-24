@@ -3,7 +3,7 @@ import { render, fireEvent, waitForElement, getByText } from '@testing-library/r
 import { NetworkSimulatorWidget } from './NetworkSimulatorWidget'
 import '@testing-library/jest-dom/extend-expect';
 
-describe('Ethereum Widget Component', () => {
+describe('Network simulator Widget Component', () => {
 
     const renderWidget = () => {
         return render(<NetworkSimulatorWidget />)

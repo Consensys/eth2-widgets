@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Validator simulator Widget Component that the ethereum widget snapshot is correct 1`] = `
+<div>
+  <div
+    class="widget-container"
+  >
+    <div
+      class="controls-container"
+    >
+      <h3
+        data-testid="widget-title"
+      >
+        Validator Simulation
+      </h3>
+      <div
+        style="width: 100%;"
+      >
+        <h4>
+          My Eth to stake
+        </h4>
+        <input
+          class="ant-input ant-input-lg"
+          placeholder="Eth amount"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        style="margin-top: 1em; width: 100%;"
+      >
+        <h4>
+          Total Eth Staked
+        </h4>
+        <div
+          class="ant-slider ant-slider-with-marks"
+          style="padding-bottom: 1em;"
+        >
+          <div
+            class="ant-slider-rail"
+          />
+          <div
+            class="ant-slider-track"
+            style="left: 0%; width: 0%;"
+          />
+          <div
+            class="ant-slider-step"
+          >
+            <span
+              class="ant-slider-dot ant-slider-dot-active"
+              style="left: 0%;"
+            />
+            <span
+              class="ant-slider-dot"
+              style="left: 100%;"
+            />
+          </div>
+          <div
+            aria-disabled="false"
+            aria-valuemax="10"
+            aria-valuemin="1"
+            aria-valuenow="1"
+            class="ant-slider-handle"
+            role="slider"
+            style="left: 0%; transform: translateX(-50%);"
+            tabindex="0"
+          />
+          <div
+            class="ant-slider-mark"
+          >
+            <span
+              class="ant-slider-mark-text ant-slider-mark-text-active"
+              style="transform: translateX(-50%); left: 0%; color: rgb(103, 117, 141);"
+            >
+              <p
+                class="legend-slider"
+              >
+                1 Million
+              </p>
+            </span>
+            <span
+              class="ant-slider-mark-text"
+              style="transform: translateX(-50%); left: 100%; color: rgb(103, 117, 141);"
+            >
+              <p
+                class="legend-slider"
+              >
+                10 Millions
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        style="margin-top: 1em; width: 100%;"
+      >
+        <h4>
+          Average percentage of validators online
+        </h4>
+        <div
+          class="ant-slider ant-slider-with-marks"
+        >
+          <div
+            class="ant-slider-rail"
+          />
+          <div
+            class="ant-slider-track"
+            style="left: 0%; width: 0%;"
+          />
+          <div
+            class="ant-slider-step"
+          >
+            <span
+              class="ant-slider-dot ant-slider-dot-active"
+              style="left: 0%;"
+            />
+            <span
+              class="ant-slider-dot"
+              style="left: 100%;"
+            />
+          </div>
+          <div
+            aria-disabled="false"
+            aria-valuemax="100"
+            aria-valuemin="66"
+            aria-valuenow="66"
+            class="ant-slider-handle"
+            role="slider"
+            style="left: 0%; transform: translateX(-50%);"
+            tabindex="0"
+          />
+          <div
+            class="ant-slider-mark"
+          >
+            <span
+              class="ant-slider-mark-text ant-slider-mark-text-active"
+              style="transform: translateX(-50%); left: 0%; color: rgb(103, 117, 141);"
+            >
+              <p
+                class="legend-slider"
+              >
+                66%
+              </p>
+            </span>
+            <span
+              class="ant-slider-mark-text"
+              style="transform: translateX(-50%); left: 100%; color: rgb(103, 117, 141);"
+            >
+              <p
+                class="legend-slider"
+              >
+                100%
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="ant-btn ant-btn-primary ant-btn-block"
+        style="margin-top: 1em;"
+        type="button"
+      >
+        <span>
+          Run
+        </span>
+      </button>
+    </div>
+    <div
+      class="chart-container"
+    >
+      <div
+        class="recharts-wrapper"
+        style="position: relative; cursor: default; width: 800px; height: 400px;"
+      >
+        <svg
+          class="recharts-surface"
+          height="400"
+          version="1.1"
+          viewBox="0 0 800 400"
+          width="800"
+        >
+          <defs>
+            <clippath
+              id="recharts5-clip"
+            >
+              <rect
+                height="360"
+                width="730"
+                x="65"
+                y="5"
+              />
+            </clippath>
+          </defs>
+          <defs>
+            <lineargradient
+              id="colorUv"
+              x1="0"
+              x2="0"
+              y1="0"
+              y2="1"
+            >
+              <stop
+                offset="5%"
+                stop-color="#3794FC"
+                stop-opacity="0.8"
+              />
+              <stop
+                offset="95%"
+                stop-color="#3794FC"
+                stop-opacity="0"
+              />
+            </lineargradient>
+          </defs>
+          <g
+            class="recharts-cartesian-grid"
+          >
+            <g
+              class="recharts-cartesian-grid-horizontal"
+            >
+              <line
+                fill="none"
+                height="360"
+                offset="[object Object]"
+                stroke="#D5DCE4"
+                stroke-dasharray="5 5"
+                width="730"
+                x="65"
+                x1="65"
+                x2="795"
+                y="5"
+                y1="5"
+                y2="5"
+              />
+              <line
+                fill="none"
+                height="360"
+                offset="[object Object]"
+                stroke="#D5DCE4"
+                stroke-dasharray="5 5"
+                width="730"
+                x="65"
+                x1="65"
+                x2="795"
+                y="5"
+                y1="365"
+                y2="365"
+              />
+            </g>
+            <g
+              class="recharts-cartesian-grid-vertical"
+            >
+              <line
+                fill="none"
+                height="360"
+                offset="[object Object]"
+                stroke="#D5DCE4"
+                stroke-dasharray="5 5"
+                width="730"
+                x="65"
+                x1="65"
+                x2="65"
+                y="5"
+                y1="5"
+                y2="365"
+              />
+              <line
+                fill="none"
+                height="360"
+                offset="[object Object]"
+                stroke="#D5DCE4"
+                stroke-dasharray="5 5"
+                width="730"
+                x="65"
+                x1="795"
+                x2="795"
+                y="5"
+                y1="5"
+                y2="365"
+              />
+            </g>
+          </g>
+          <g
+            class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"
+          >
+            <line
+              class="recharts-yAxis yAxis"
+              fill="none"
+              height="360"
+              name="my_eth_net_reward"
+              orientation="left"
+              stroke="#97A4BA"
+              type="number"
+              viewBox="[object Object]"
+              width="60"
+              x="5"
+              x1="65"
+              x2="65"
+              y="5"
+              y1="5"
+              y2="365"
+            />
+            <g
+              class="recharts-cartesian-axis-ticks"
+            />
+          </g>
+        </svg>
+        <div
+          class="recharts-legend-wrapper"
+          style="position: absolute; width: 790px; height: 36px; right: 5px; top: 5px;"
+        >
+          <ul
+            class="recharts-default-legend"
+            style="padding: 0px; margin: 0px; text-align: right;"
+          >
+            <li
+              class="recharts-legend-item legend-item-0"
+              style="display: inline-block; margin-right: 10px;"
+            >
+              <svg
+                class="recharts-surface"
+                height="14"
+                style="display: inline-block; vertical-align: middle; margin-right: 4px;"
+                version="1.1"
+                viewBox="0 0 32 32"
+                width="14"
+              >
+                <path
+                  class="recharts-legend-icon"
+                  d="M0,16h10.666666666666666
+            A5.333333333333333,5.333333333333333,0,1,1,21.333333333333332,16
+            H32M21.333333333333332,16
+            A5.333333333333333,5.333333333333333,0,1,1,10.666666666666666,16"
+                  fill="none"
+                  stroke="#3794FC"
+                  stroke-width="4"
+                />
+              </svg>
+              <span
+                class="recharts-legend-item-text"
+              >
+                Net rewards
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="recharts-tooltip-wrapper"
+          style="transform: translate(undefinedpx, undefinedpx); pointer-events: none; visibility: hidden; position: absolute; top: 0px;"
+        >
+          <div
+            class="recharts-default-tooltip"
+            style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid #ccc; white-space: nowrap;"
+          >
+            <p
+              class="recharts-tooltip-label"
+              style="margin: 0px;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

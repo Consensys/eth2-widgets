@@ -8,7 +8,7 @@ interface SliderProps {
 }
 
 const SliderWrapper: React.FC = (props: PropsWithChildren<any>) => {
-    return <div style={{ width: "100%" }}>
+    return <div style={{ marginTop: "1em", width: "100%" }}>
         {props.children}
     </div>
 }
@@ -41,6 +41,7 @@ export const EthStakedSlider: React.FC<SliderProps> = (props: SliderProps) => {
     return <SliderWrapper>
         <h4>Total Eth Staked</h4>
         <Slider tipFormatter={ethStakedInMillionsFormatter}
+            style={{ paddingBottom: "1em" }}
             defaultValue={initialValue}
             max={10}
             marks={ethSliderMarks}
@@ -127,7 +128,7 @@ const averageValidatorsOnlineMarks = {
 export const AverageValidatorsOnline: React.FC<SliderProps> = (props: SliderProps) => {
     const { initialValue, onChange } = props
     return <SliderWrapper>
-        <h4>Average percentage of validators online</h4>
+        <h4>My validator uptime</h4>
         <Slider tipFormatter={percentageFormatter}
             defaultValue={initialValue}
             onChange={onChange}

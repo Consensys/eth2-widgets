@@ -5,3 +5,4 @@ export const BIGGEST_PROBABILITY = 100
 export const NET_REWARDS_COLOUR = '#3794FC'
 export const PENALTIES_COLOUR = '#FF0000'
 export const REWARDS_COLOUR = '#9D60FB'
+export const MINIMAL_MY_ETH_STAKED = 32

@@ -4,7 +4,6 @@ import { CartesianGrid, XAxis, YAxis, Label, AreaChart, Area, Legend, Tooltip } 
 
 import { MINIMAL_ETH_STAKED, MINIMAL_AVERAGE_PERCENTAGE_VALIDATORS_ONLINE, BIGGEST_PROBABILITY, NET_REWARDS_COLOUR, REWARDS_COLOUR, PENALTIES_COLOUR } from './constants'
 import { EthStakedSlider, OnlineProbabilitySlider, HonestProbabilitySlider } from './Sliders'
-// import { buildFakeSimulationData } from './faker';
 import { ControlsContainer, ChartContainer } from './Containers';
 import { data } from '../../data'
 
@@ -12,14 +11,10 @@ import "./styles.css"
 
 const { Panel } = Collapse;
 
-const percentages = [{
-
-}]
 export const getDataItems = (totalEthStaked: number, onlineProbability: number, honestProbability: number) => { // honestProbability is ignored
     console.log("totalEthStaked", totalEthStaked)
     console.log("onlineProbability", onlineProbability)
     const items = data.filter((item) => {
-        // console.log("ITEM", item)
         return item.initial_staked_balance === (totalEthStaked * 1000000) && item.probability_online == (onlineProbability / 100)
     })
 
@@ -27,8 +22,6 @@ export const getDataItems = (totalEthStaked: number, onlineProbability: number, 
 }
 
 export const NetworkSimulatorWidget: React.FC = () => {
-    const [isReady, setIsReady] = useState(false)
-    // const [wasmClient, setWasmClient] = useState(undefined)
     const [ethStaked, setEthStaked] = useState(MINIMAL_ETH_STAKED)
     const [onlineProbability, setOnlineProbability] = useState(BIGGEST_PROBABILITY)
     const [honestProbability, setHonestProbability] = useState(BIGGEST_PROBABILITY)
@@ -66,7 +59,6 @@ export const NetworkSimulatorWidget: React.FC = () => {
                     disabled={false}
                     onChange={(e) => {
                         console.log("New Eth Staked Value", e)
-                        // call rust module
                         setEthStaked(e)
                     }}
                     initialValue={MINIMAL_ETH_STAKED}
